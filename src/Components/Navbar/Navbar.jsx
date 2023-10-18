@@ -11,7 +11,7 @@ const Navbar = () => {
   );
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -39,7 +39,10 @@ const Navbar = () => {
 
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <div className="flex items-center gap-3">
+            <img className="w-[50px]" src={'https://i.ibb.co/rHtqjF0/LOGO.jpg'} alt="" />
+          <p className="text-2xl font-semibold">Myon <span className="bg-cyan-400 px-2 py-1 rounded-full ">Gadget</span></p>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -47,7 +50,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn btn-info">Login</a>
         </div>
       </div>
     </div>

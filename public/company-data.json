@@ -1,0 +1,34 @@
+[
+      {
+        "id": 1,
+        "name": "Amazon",
+        "logo": "https://i.ibb.co/0KRXpHd/png-transparent-amazon-logo-emblem-text-symbol-yellow-amazon-emblem-text-retail.png"
+      },
+      {
+        "id": 2,
+        "name": "eBay",
+        "logo": "https://i.ibb.co/QYq04Tk/ebay-PNG22.png"
+      },
+      {
+        "id": 3,
+        "name": "Best Buy",
+        "logo": "bestbuy_logo.png"
+      },
+      {
+        "id": 4,
+        "name": "Newegg",
+        "logo": "newegg_logo.png"
+      },
+      {
+        "id": 5,
+        "name": "B&H",
+        "logo": "bhphoto_logo.png"
+      },
+      {
+        "id": 6,
+        "name": "Walmart",
+        "logo": "walmart_logo.png"
+      }
+    
+]
+  
