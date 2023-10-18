@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "logo": "https://i.ibb.co/9cQPgzR/3576506-65968-removebg-preview.png"
+    },
+    {
+      "id": 2,
+      "name": "Television",
+      "logo": "https://i.ibb.co/vwZ355z/800771-Samung-tv-3-removebg-preview.png"
+    },
+    {
+      "id": 3,
+      "name": "Headphone",
+      "logo": "https://i.ibb.co/wCN1jk0/1609440-P2-PDWD0-removebg-preview.png"
+    },
+    {
+      "id": 4,
+      "name": "Watch",
+      "logo": "https://i.ibb.co/XDFmFNs/7765006-3725815-removebg-preview.png"
+    },
+    {
+      "id": 5,
+      "name": "Game",
+      "logo": "https://i.ibb.co/82vZJ8T/tech-device-with-nature-background-removebg-preview.png"
+    },
+    {
+      "id": 6,
+      "name": "camera",
+      "logo": "https://i.ibb.co/kGB784F/camera-photographic-equipment-lens-technology-generative-ai-removebg-preview.png"
+    },
+    {
+        "id": 7,
+        "name": "Audio",
+        "logo": "https://i.ibb.co/qg4MX2v/retro-microphone-notebook-computer-live-webcast-air-concept-removebg-preview.png"
+      }
+  
+]
