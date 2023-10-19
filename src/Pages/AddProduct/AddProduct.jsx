@@ -1,6 +1,37 @@
-import Navbar from "../../Components/Navbar/Navbar";
 
 const AddProduct = () => {
+
+    const handleAddProduct = e => {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const image = form.image.value;
+        const name = form.name.value;
+        const brand = form.brand.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const rating = form.rating.value;
+
+        const newProduct = {image, name, brand, type, price, description, rating}
+        console.log(newProduct);
+
+
+
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(newProduct)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
+
   return (
     <div className="max-w-7xl mx-auto my-10 bg-gradient-to-r from-cyan-100 to-blue-200 p-5 rounded-md">
       <div className="text-center text-4xl font-bold pb-10">
@@ -8,7 +39,7 @@ const AddProduct = () => {
       </div>
 
       <div>
-        <form className="">
+        <form onSubmit={handleAddProduct}>
             {/* 1st row */}
           <div className="md:flex mb-5">
             <div className="form-control md:w-1/2">
@@ -26,7 +57,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control md:w-1/2 ml-10">
               <label className="label">
-                <span className="label-text">Your Name</span>
+                <span className="label-text">Product Name</span>
               </label>
               <label className="input-group">
                 <input
