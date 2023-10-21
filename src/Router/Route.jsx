@@ -8,6 +8,7 @@ import MyCart from "../Pages/MyCart/MyCart";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register.jsx/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const siteRoute = createBrowserRouter([
@@ -23,7 +24,7 @@ const siteRoute = createBrowserRouter([
                 },
                 {
                     path: '/addProduct',
-                    element: <AddProduct></AddProduct>
+                    element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
                 },
                 {
                     path: '/companyProduct',
@@ -32,12 +33,12 @@ const siteRoute = createBrowserRouter([
                 },
                 {
                     path: '/productDetails/:_id',
-                    element: <ProductDetails></ProductDetails>,
+                    element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
                     loader: () => fetch('http://localhost:5000/product')
                 },
                 {
                     path: '/myCart',
-                    element: <MyCart></MyCart>,
+                    element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
                 },
                 {
                     path: '/login',
