@@ -6,36 +6,6 @@ const ProductDetail = ({ product }) => {
 
 
   const handleAddCart = () => {
-    const addProduct = []
-
-    const productList = fetch('http://localhost:5000/product');
-
-    // if(!donationCategory){
-    //     addDonation.push(donation);
-    //     localStorage.setItem('donation', JSON.stringify(addDonation));
-    //     swal("Good job!", "Donation Successful!", "success");
-    // }
-    // else{
-
-    //   const isExits = donationCategory?.find(donation => donation.id === id);
-
-    //   if(!isExits){
-        
-    //     addDonation.push(...donationCategory, donation);
-    //     localStorage.setItem('donation', JSON.stringify(addDonation));
-    //     swal("Good job!", "Donation Successful!", "success");
-
-    //   }
-    //   else{
-    //     swal("Error!", "Already Donation done in this package", "error");
-    //   }
-
-    // if(!productList){
-    //     addProduct.push(product)
-    // }
-    // else{
-    //     const isExits = productList?.find(product => product._id === _id)
-    // }
 
   }
 
