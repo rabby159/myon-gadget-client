@@ -1,18 +1,18 @@
 [
       {
         "id": 1,
-        "name": "Amazon",
-        "logo": "https://i.ibb.co/NC66DdX/01cada77a0a7d326d85b7969fe26a728-1.jpg"
+        "name": "Apple",
+        "logo": "https://i.ibb.co/hWHjY41/62dec0259f18b71442a15966-Apple-Logo.png"
       },
       {
         "id": 2,
-        "name": "eBay",
-        "logo": "https://i.ibb.co/QYq04Tk/ebay-PNG22.png"
+        "name": "Xiaomi",
+        "logo": "https://i.ibb.co/ygCQX6v/png-transparent-xiaomi-flat-brand-logo-icon.png"
       },
       {
         "id": 3,
-        "name": "Best Buy",
-        "logo": "https://i.ibb.co/Fw8Ryy0/Screenshot-2023-10-18-103520.jpg"
+        "name": "realme",
+        "logo": "https://i.ibb.co/VNjtpRw/71710f762b6af383a73f9760fda3a3ae.png"
       },
       {
         "id": 4,
@@ -26,8 +26,8 @@
       },
       {
         "id": 6,
-        "name": "Walmart",
-        "logo": "https://i.ibb.co/XkgmCyq/walmart-transparent-logo-free-png.webp"
+        "name": "Gadget & Gear",
+        "logo": "https://i.ibb.co/7rHBKR4/download.png"
       }
     
 ]
