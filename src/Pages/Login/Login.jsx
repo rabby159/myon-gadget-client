@@ -1,11 +1,40 @@
-import { Link } from "react-router-dom";
-
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Router/AuthProvider";
+import swal from "sweetalert";
 
 const Login = () => {
+
+    const {loginUser} = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+    const handleLogin = e =>{
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+
+        const email = form.get('email');
+        const password = form.get('password')
+
+        console.log(email, password)
+
+
+      loginUser(email, password)
+        .then(res=> {
+          swal("Welcome!", "Login Successful", "success");
+              navigate(location?.state ? location.state : '/' );
+        })
+        .catch(err => {
+          swal("Invalid!", "Provide right email/password", "error");
+        })
+
+    }
+
+
     return (
         <div className="flex justify-center items-center h-[90vh]">
         <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-          <form className="space-y-6" action="#">
+          <form onSubmit={handleLogin} className="space-y-6" action="#">
             <h5 className="text-xl font-medium text-gray-900 dark:text-white">
               Sign in to our platform
             </h5>

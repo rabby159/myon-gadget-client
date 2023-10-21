@@ -1,10 +1,58 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Router/AuthProvider";
+import swal from "sweetalert";
 
 const Register = () => {
+    const {createUser, handleUpdateProfile} = useContext(AuthContext);
+
+    const handleRegister =(event)=>{
+
+        event.preventDefault();
+        const form = new FormData(event.currentTarget);
+
+        const name = form.get('name');
+        const imageURL = form.get('imageURL')
+        const email = form.get('email');
+        const password = form.get('password');
+
+        // console.log(name,imageURL, email, password);
+
+        if(password.length < 6){
+          swal("Invalid!", "Password must should be 6 character", "error");
+          return;
+           
+        }
+
+        if(!/[A-Z]/.test(password)){
+          swal("Invalid!", "Password must should be a 1 capital latter", "error");
+          return;
+        }
+
+        if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)){
+          swal("Invalid!", "Password must should be a 1 Special latter", "error");
+          return;
+        }
+
+
+        createUser(email, password)
+          .then(res => {
+            handleUpdateProfile(name, imageURL)
+            .then(()=> {
+              swal("Welcome!", "Registration Successful", "success");
+             
+            })
+          })
+          .catch(error => {
+            swal("Invalid!", "Provide right email/password", "error");
+          })
+        
+    }
+
     return (
         <div className="flex justify-center items-center h-[95vh]">
       <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form className="space-y-6" action="#">
+        <form onSubmit={handleRegister} className="space-y-6" action="#">
           <h5 className="text-xl font-medium text-gray-900 dark:text-white">
             Register in to our platform
           </h5>
@@ -99,7 +147,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Register to your account
           </button>
