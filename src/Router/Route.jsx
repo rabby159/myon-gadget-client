@@ -6,6 +6,8 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import CompanyProducts from "../Pages/CompanyProduct/CompanyProducts";
 import MyCart from "../Pages/MyCart/MyCart";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register.jsx/Register";
 
 
 const siteRoute = createBrowserRouter([
@@ -36,6 +38,14 @@ const siteRoute = createBrowserRouter([
                 {
                     path: '/myCart',
                     element: <MyCart></MyCart>,
+                },
+                {
+                    path: '/login',
+                    element: <Login></Login>
+                },
+                {
+                    path: '/register',
+                    element: <Register></Register>
                 }
             ]
         }
