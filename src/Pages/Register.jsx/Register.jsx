@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Router/AuthProvider";
 import swal from "sweetalert";
+import ExtraLogin from "../../Components/ExtraLogin/ExtraLogin";
 
 const Register = () => {
     const {createUser, handleUpdateProfile} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister =(event)=>{
 
@@ -40,7 +44,7 @@ const Register = () => {
             handleUpdateProfile(name, imageURL)
             .then(()=> {
               swal("Welcome!", "Registration Successful", "success");
-             
+              navigate(location?.state ? location.state : '/' );
             })
           })
           .catch(error => {
@@ -161,7 +165,7 @@ const Register = () => {
             </Link>
           </div>
         </form>
-        {/* <GoogleLogin></GoogleLogin> */}
+        <ExtraLogin></ExtraLogin>
       </div>
     </div>
     );

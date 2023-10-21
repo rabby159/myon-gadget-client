@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Router/AuthProvider";
 import swal from "sweetalert";
+import ExtraLogin from "../../Components/ExtraLogin/ExtraLogin";
 
 const Login = () => {
 
@@ -111,7 +113,7 @@ const Login = () => {
               </Link>
             </div>
           </form>
-          {/* <GoogleLogin></GoogleLogin> */}
+         <ExtraLogin></ExtraLogin>
         </div>
       </div>
    
