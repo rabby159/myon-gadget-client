@@ -2,7 +2,7 @@
 
 
 const ProductDetail = ({ product }) => {
-  const {_id, image, name, price, description } = product;
+  const { image, name, price, description } = product;
 
 
   const handleAddCart = () => {

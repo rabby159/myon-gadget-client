@@ -6,9 +6,9 @@ const UpdateRoute = () => {
 
     const products = useLoaderData();
 
-    const { image, name, brand, type, price, description, rating } = products;
+    const {_id, image, name, brand, type, price, description, rating } = products;
 
-    const handleAddProduct = (e) => {
+    const handleUpdateProduct = (e) => {
         e.preventDefault();
     
         const form = e.target;
@@ -21,23 +21,23 @@ const UpdateRoute = () => {
         const description = form.description.value;
         const rating = form.rating.value;
     
-        const newProduct = { image, name, brand, type, price, description, rating };
-        console.log(newProduct);
+        const updateProduct = { image, name, brand, type, price, description, rating };
+        // console.log(newProduct);
     
-        fetch("http://localhost:5000/product", {
-          method: "POST",
+        fetch(`https://myon-gadget-server-qyfz8kcw0-md-rabbys-projects.vercel.app/product/${_id}`, {
+          method: "PUT",
           headers: {
             "content-type": "application/json",
           },
-          body: JSON.stringify(newProduct),
+          body: JSON.stringify(updateProduct),
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount > 0){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Your new product added successfully',
+                    text: 'Your update product successfully',
                     icon: 'success',
                     confirmButtonText: 'Done'
                   })
@@ -54,7 +54,7 @@ const UpdateRoute = () => {
       </div>
 
       <div>
-        <form onSubmit={handleAddProduct}>
+        <form onSubmit={handleUpdateProduct}>
           {/* 1st row */}
           <div className="md:flex mb-5">
             <div className="form-control md:w-1/2">

@@ -17,7 +17,7 @@ const AddProduct = () => {
     const newProduct = { image, name, brand, type, price, description, rating };
     console.log(newProduct);
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://myon-gadget-server-qyfz8kcw0-md-rabbys-projects.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

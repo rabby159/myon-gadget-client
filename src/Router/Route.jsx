@@ -30,12 +30,12 @@ const siteRoute = createBrowserRouter([
                 {
                     path: '/companyProduct',
                     element: <CompanyProducts></CompanyProducts>,
-                    loader: () => fetch('http://localhost:5000/product')
+                    loader: () => fetch('https://myon-gadget-server-qyfz8kcw0-md-rabbys-projects.vercel.app/product')
                 },
                 {
                     path: '/productDetails/:_id',
                     element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                    loader: () => fetch('http://localhost:5000/product')
+                    loader: () => fetch('https://myon-gadget-server-qyfz8kcw0-md-rabbys-projects.vercel.app/product')
                 },
                 {
                     path: '/myCart',
@@ -51,8 +51,8 @@ const siteRoute = createBrowserRouter([
                 },
                 {
                     path: '/updateRoute/:id',
-                    element: <UpdateRoute></UpdateRoute>,
-                    loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                    element: <PrivateRoute><UpdateRoute></UpdateRoute></PrivateRoute>,
+                    loader: ({params}) => fetch(`https://myon-gadget-server-qyfz8kcw0-md-rabbys-projects.vercel.app/product/${params.id}`)
                 }
             ]
         }
