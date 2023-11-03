@@ -21,7 +21,7 @@ const siteRoute = createBrowserRouter([
                 {
                     path: '/',
                     element: <Home></Home>,
-                    loader: () => fetch('company-data.json')
+                    loader: () => fetch('http://localhost:5000/brandName')
                 },
                 {
                     path: '/addProduct',

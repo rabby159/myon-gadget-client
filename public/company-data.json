@@ -1,31 +1,25 @@
 [
       {
-        "id": 1,
         "name": "Apple",
         "logo": "https://i.ibb.co/hWHjY41/62dec0259f18b71442a15966-Apple-Logo.png"
       },
       {
-        "id": 2,
         "name": "Xiaomi",
         "logo": "https://i.ibb.co/ygCQX6v/png-transparent-xiaomi-flat-brand-logo-icon.png"
       },
       {
-        "id": 3,
         "name": "realme",
         "logo": "https://i.ibb.co/VNjtpRw/71710f762b6af383a73f9760fda3a3ae.png"
       },
       {
-        "id": 4,
         "name": "Newegg",
         "logo": "https://i.ibb.co/R2BGBjF/newegg-icon-2048x2048-a5yj2hbb.png"
       },
       {
-        "id": 5,
         "name": "B&H",
         "logo": "https://i.ibb.co/jbCvLZb/BHPhoto.jpg"
       },
       {
-        "id": 6,
         "name": "Gadget & Gear",
         "logo": "https://i.ibb.co/7rHBKR4/download.png"
       }
