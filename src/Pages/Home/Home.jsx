@@ -18,6 +18,7 @@ const Home = () => {
                 company?.map((aCompany) => <CompanyCards key={aCompany.id} aCompany={aCompany}></CompanyCards>)
             }
            </div>
+           <h2>okey</h2>
            <Category></Category>
            <Services></Services>
            <Footer></Footer>
